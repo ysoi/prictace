@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //创建正则表达式
+        // var p = new RegExp('a');
+        // console.log(p);
+        // //使用字面量
+        // var b = /a/;
+        // console.log(b);
+        // var str='name';
+        // var r=b.test(str);
+        // console.log(r);
+        // //模式修正符 i g m
+        // var m=/one/i;
+        // var s='ONes';
+        // var n=m.test(s);
+        // console.log(n);
+        //原子
+        //只表示一个字符的原子
+        // var a=/!/;
+        // var s='我是中国人!';
+        // var t=a.test(s);
+        // console.log(t);
+        // var b=/\d/;
+        // var s='123456';
+        // var t=b.test(s);
+        // console.log(t);
+        // var c=/\D/;
+        // var s='90_';
+        // var t=c.test(s);
+        // console.log(t);
+        // var d=/\s/;
+        // var s='  the day is good';
+        // var t=d.test(s);
+        // console.log(t);
+        // /w 0-9 A-W a-w _
+        // var p=/\d\d\d$/;
+        // var str=' sty117';
+        // var r=p.test(str);
+        // console.log(r);
+        // var a=/\d{4}-\d{1,2}-\d{1,2}/;
+        // var s='My bardy is 1994-08-29';
+        // var t=a.test(s);
+        // console.log(t);
+        //*={0,}
+        //+  ==  {1,}
+        //?  =={0,1}
+    
+        // var p=/[(ab)(ce)]/;//区间写法 [0-4]
+        // var str='abce';
+        // var t=p.test(str);
+        // console.log(t);
+        
+
+        //正则表达-匹配
+        // var p=/a/;
+        // var s='My naae is jack';
+        // var arr=p.exec(s);
+        // console.log(arr);
+       //全局匹配
+        // var p=/(\d)(\d)\d\2\1/g;
+        // var s="12321 23432 45654 67876 12345 78909";
+        // var r;
+        // while( r=p.exec(s) ){
+        //     console.log(r);
+        // }
+        //分组引用
+        var s="1994-08-29 1996-03-08 2003-08-07";
+        console.log(s);
+        var r=s.replace(/(\d{4})-(\d{2})-(\d{2})/g,'$1年$2月$3日');
+        console.log(r);
+       
+        
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="http://www.baidu.com">
+            姓名：<input type="text">
+            出生日期：<input type="text" required pattern="\d{4}-\d{2}-\d{2}">格式：2000-01-01
+            邮箱：<input type="email">
+            <input type="submit" value='提交'>
+        </form>
+       
+    </div>
+</body>
+
+</html>
